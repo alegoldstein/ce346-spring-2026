@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CE346 Symbols")(type "KiCad")(uri "${KIPRJMOD}/CE346 Symbols.kicad_sym")(options "")(descr ""))
+)

@@ -1,0 +1,9 @@
+Manufacturer=Nordic Semiconductor
+PartNumber=nRF52833-QDAA-R
+PartCategory=Integrated Circuit
+PackageCategory=Quad Flat No-Lead
+PinCount=41
+Version=1.1
+Released=2023-10-20 14:20:33
+Downloaded=2026-05-03 22:13:06
+3D=Y

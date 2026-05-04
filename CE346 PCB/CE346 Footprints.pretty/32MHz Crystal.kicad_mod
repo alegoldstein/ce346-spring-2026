@@ -1,0 +1,102 @@
+(footprint "32MHz Crystal"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at -0.05 3.75 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "10d57cd8-0093-415e-831e-24a957d810b9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "32MHz Crystal"
+		(at -0.05 5.25 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "a15b89f8-063c-4c49-beaa-281220cb7834")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a102fc89-c41f-445d-8ead-14acf1e5cbc3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e1330c9f-28b0-45fd-9833-017a2ca2f197")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_text user "${REFERENCE}"
+		(at -0.05 6.75 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "079dd78e-786e-4ad8-92e5-f1a127ec483f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.9 -0.6)
+		(size 0.6 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "e19124f5-1e13-4cd4-91a9-fb237545b6e3")
+	)
+	(pad "2" smd roundrect
+		(at 0.9 -0.6)
+		(size 0.6 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "833be4cf-8473-46a8-b920-cdc8b402e46b")
+	)
+	(pad "3" smd roundrect
+		(at -0.9 0.6)
+		(size 0.6 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "a3532bbc-505b-4209-bd3a-1ccc2732590f")
+	)
+	(pad "4" smd roundrect
+		(at 0.9 0.6)
+		(size 0.6 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.15)
+		(thermal_bridge_angle 45)
+		(uuid "892f7189-e951-4ae8-87ef-cb59874021be")
+	)
+	(embedded_fonts no)
+)
