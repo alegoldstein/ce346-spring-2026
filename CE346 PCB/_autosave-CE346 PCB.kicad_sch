@@ -1826,251 +1826,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_01x04_Pin"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x04_Pin"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x04, script generated"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x04_Pin_1_1"
-				(rectangle
-					(start 0.8636 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy 0.8636 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 0.8636 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 0.8636 -5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -5.08 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector_Generic:Conn_02x04_Odd_Even"
 			(pin_names
 				(offset 1.016)
@@ -2932,10 +2687,359 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Sensor_Audio:IM69D130"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "MK"
+				(at -7.62 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "IM69D130"
+				(at 1.27 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Sensor_Audio:Infineon_PG-LLGA-5-1"
+				(at 17.78 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IM69D130-DS-v01_00-EN.pdf?fileId=5546d462602a9dc801607a0e46511a2e"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "High performance digital XENSIV MEMS microphone, -36 dBFS Sensitivity, LLGA-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mems microphone"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Infineon*PG*LLGA*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "IM69D130_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 1.27) (xy -5.08 -1.27)
+					)
+					(stroke
+						(width 0.381)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 0)
+					(radius 1.27)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "IM69D130_1_1"
+				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "SELECT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "CLOCK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 -2.54 180)
+					(length 2.54)
+					(name "DATA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 160.655 26.035)
+		(end 220.98 53.34)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 16455399-c451-4170-88c8-eca7f51f6dfb)
+	)
+	(rectangle
+		(start 14.605 149.225)
+		(end 146.685 196.215)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 32509988-fcdd-41a2-a0f0-56c5968d6726)
 	)
 	(rectangle
 		(start 14.605 34.925)
-		(end 62.23 82.55)
+		(end 66.675 82.55)
 		(stroke
 			(width 0)
 			(type default)
@@ -2946,8 +3050,8 @@
 		(uuid 77dc8eff-3e50-4e0f-a767-4d153d1f9435)
 	)
 	(rectangle
-		(start 102.87 29.21)
-		(end 151.13 52.705)
+		(start 100.965 26.035)
+		(end 151.765 53.34)
 		(stroke
 			(width 0)
 			(type default)
@@ -2979,6 +3083,26 @@
 		)
 		(uuid "9dff4f74-a9ca-4a05-b1a6-bfea8fc69b82")
 	)
+	(text "logic level shifters"
+		(exclude_from_sim no)
+		(at 28.575 194.31 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a1e09bff-a3f4-4abf-8c3c-f0dc7ee9e42a")
+	)
+	(text "zener based protection (both + and - spikes)"
+		(exclude_from_sim no)
+		(at 191.135 51.435 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ba4992a4-a02d-410d-8344-35e2a13dbe37")
+	)
 	(text "2x4 connectors for 4 piezo sensors"
 		(exclude_from_sim no)
 		(at 36.195 133.35 0)
@@ -2989,9 +3113,9 @@
 		)
 		(uuid "e351ebad-7770-44ac-b479-3ec26897ce1b")
 	)
-	(text "1x4 connectors for IR muxs\n (signal, data, power, gnd)\n\n"
+	(text "1x4 connectors for IR muxs\n (signal, data, power, gnd, and gnd for shielding)\n\n"
 		(exclude_from_sim no)
-		(at 37.465 80.01 0)
+		(at 40.005 80.645 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2999,26 +3123,116 @@
 		)
 		(uuid "ed2778df-e226-410d-b97a-b610e292e13a")
 	)
+	(wire
+		(pts
+			(xy 180.975 33.02) (xy 184.15 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08264efd-a550-4592-bc9c-d456256143c8")
+	)
 	(symbol
-		(lib_id "Device:D_Zener")
-		(at 76.835 45.72 0)
+		(lib_id "Sensor_Audio:IM69D130")
+		(at 70.485 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2f3be0b0-2826-4821-bcf4-fc1e74e17456")
-		(property "Reference" "D1"
-			(at 76.835 39.37 0)
+		(uuid "1370f0f4-14f1-4adf-a7e7-d5b47a028b39")
+		(property "Reference" "MK2"
+			(at 60.96 182.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IM69D130"
+			(at 60.96 185.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "CE346 Footprints:Logic_level_shifter"
+			(at 88.265 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IM69D130-DS-v01_00-EN.pdf?fileId=5546d462602a9dc801607a0e46511a2e"
+			(at 70.485 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High performance digital XENSIV MEMS microphone, -36 dBFS Sensitivity, LLGA-5"
+			(at 70.485 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b1204cf0-0562-4dcc-a435-0017b3849f5d")
+		)
+		(pin "5"
+			(uuid "212b856b-31cc-4775-9e8a-04393b00adb2")
+		)
+		(pin "4"
+			(uuid "3e5127e9-07ad-4d2f-9011-0c632839d7af")
+		)
+		(pin "3"
+			(uuid "c87f3768-b920-4b7a-8760-67fdd639356e")
+		)
+		(pin "1"
+			(uuid "b12a565f-b4db-4851-868f-3d9160e8702e")
+		)
+		(instances
+			(project "CE346 PCB"
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "MK2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 177.165 33.02 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18fb7ace-7dbd-4e6e-8cb1-d077e655193c")
+		(property "Reference" "R1"
+			(at 177.165 27.305 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "D_Zener"
-			(at 76.835 41.91 0)
+		(property "Value" "R"
+			(at 177.165 29.845 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3026,7 +3240,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.835 45.72 0)
+			(at 177.165 34.798 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3035,7 +3249,163 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 76.835 45.72 0)
+			(at 177.165 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 177.165 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce41e093-4405-4c39-8881-06d87c69386a")
+		)
+		(pin "2"
+			(uuid "aa4063f4-b729-4dea-900a-f76efdd439ec")
+		)
+		(instances
+			(project ""
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x04_Odd_Even")
+		(at 40.005 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1e1ca3bf-c17f-432f-a114-30bf67844202")
+		(property "Reference" "J1"
+			(at 41.275 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x04_Odd_Even"
+			(at 41.275 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.005 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 40.005 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 40.005 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "674d6c7f-3928-4891-b5eb-0d541fdbc0df")
+		)
+		(pin "5"
+			(uuid "92667ed0-3346-4bf8-a3b0-b890d6a06626")
+		)
+		(pin "8"
+			(uuid "1c2e8d9e-1115-4cda-a482-534ac037c770")
+		)
+		(pin "1"
+			(uuid "b16c2487-bc6a-4fd2-a6ed-850ac70e3a86")
+		)
+		(pin "3"
+			(uuid "dc16e84f-5b74-4e55-a325-a93e9b721288")
+		)
+		(pin "2"
+			(uuid "31aef090-8a10-4654-a270-0149a1dd337f")
+		)
+		(pin "7"
+			(uuid "bfb5a23d-6db6-46b1-ad84-70915ff1ba44")
+		)
+		(pin "6"
+			(uuid "218de1e1-7a70-4ab5-a6c2-9336f0cc9a67")
+		)
+		(instances
+			(project ""
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 184.15 36.83 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f3be0b0-2826-4821-bcf4-fc1e74e17456")
+		(property "Reference" "D1"
+			(at 187.325 35.5599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "D_Zener"
+			(at 187.325 38.0999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 184.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3044,7 +3414,7 @@
 			)
 		)
 		(property "Description" "Zener diode"
-			(at 76.835 45.72 0)
+			(at 184.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3068,33 +3438,45 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
-		(at 34.925 48.26 0)
+		(lib_id "Sensor_Audio:IM69D130")
+		(at 114.3 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "55f5a572-7abe-48df-950c-b037202623bd")
-		(property "Reference" "J1"
-			(at 35.56 41.275 0)
+		(uuid "5261ada1-2b96-435c-82f9-d70c5678d5b8")
+		(property "Reference" "MK5"
+			(at 104.775 182.8799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x04_Pin"
-			(at 35.56 43.815 0)
+		(property "Value" "IM69D130"
+			(at 104.775 185.4199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" ""
-			(at 34.925 48.26 0)
+		(property "Footprint" "CE346 Footprints:Logic_level_shifter"
+			(at 132.08 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IM69D130-DS-v01_00-EN.pdf?fileId=5546d462602a9dc801607a0e46511a2e"
+			(at 114.3 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3102,17 +3484,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 34.925 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 34.925 48.26 0)
+		(property "Description" "High performance digital XENSIV MEMS microphone, -36 dBFS Sensitivity, LLGA-5"
+			(at 114.3 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3121,21 +3494,24 @@
 			)
 		)
 		(pin "2"
-			(uuid "ca995682-5b00-4b0c-823c-302eeb69698a")
+			(uuid "61fce437-7cad-4c65-baec-0cdd9fc956b2")
 		)
-		(pin "1"
-			(uuid "fbd6eb4e-d6f7-4a5a-88a1-59a33ca45712")
-		)
-		(pin "3"
-			(uuid "d14083b4-9a08-4d37-934d-5b507b762051")
+		(pin "5"
+			(uuid "aa62a78c-c2c2-42a0-b26c-77044780b075")
 		)
 		(pin "4"
-			(uuid "ac7a86fc-c1ee-4710-91d8-85d6db082b33")
+			(uuid "84c539df-5cf6-4977-b90c-a1193626973f")
+		)
+		(pin "3"
+			(uuid "d0145c04-d9f8-4d64-a22f-2bb6bb97f16b")
+		)
+		(pin "1"
+			(uuid "7702edc4-c191-42fc-a3f5-0224f227687d")
 		)
 		(instances
-			(project ""
+			(project "CE346 PCB"
 				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
-					(reference "J1")
+					(reference "MK5")
 					(unit 1)
 				)
 			)
@@ -3347,6 +3723,166 @@
 		)
 	)
 	(symbol
+		(lib_id "Sensor_Audio:IM69D130")
+		(at 114.3 163.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5bcbcb6f-8962-4bc7-9085-f35a16c54ef1")
+		(property "Reference" "MK4"
+			(at 104.775 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IM69D130"
+			(at 104.775 165.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "CE346 Footprints:Logic_level_shifter"
+			(at 132.08 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IM69D130-DS-v01_00-EN.pdf?fileId=5546d462602a9dc801607a0e46511a2e"
+			(at 114.3 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High performance digital XENSIV MEMS microphone, -36 dBFS Sensitivity, LLGA-5"
+			(at 114.3 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c2602030-1fb4-499a-845c-89945e21c856")
+		)
+		(pin "5"
+			(uuid "685484db-2022-411d-b438-8e9fcf3a6da0")
+		)
+		(pin "4"
+			(uuid "fd317e0f-bdfc-406a-82a5-a3c014a8d27f")
+		)
+		(pin "3"
+			(uuid "f9a0b8b7-8164-494f-83fd-89e3f20cd33d")
+		)
+		(pin "1"
+			(uuid "8b94cdc6-ba37-4cf6-be53-407d3da5162e")
+		)
+		(instances
+			(project "CE346 PCB"
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "MK4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Audio:IM69D130")
+		(at 70.485 163.195 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6e37262d-249e-4222-b06c-e9d2e9ce1282")
+		(property "Reference" "MK3"
+			(at 60.96 161.9249 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IM69D130"
+			(at 60.96 164.4649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "CE346 Footprints:Logic_level_shifter"
+			(at 88.265 170.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IM69D130-DS-v01_00-EN.pdf?fileId=5546d462602a9dc801607a0e46511a2e"
+			(at 70.485 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High performance digital XENSIV MEMS microphone, -36 dBFS Sensitivity, LLGA-5"
+			(at 70.485 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4da8ba19-cb62-4dc4-a5bb-494b2fea5b2c")
+		)
+		(pin "5"
+			(uuid "c3fc925a-fb2f-4b03-a5c4-6c44bc581a5c")
+		)
+		(pin "4"
+			(uuid "b5049f0a-86ce-4f7b-8762-d98d9fd74e7e")
+		)
+		(pin "3"
+			(uuid "f6218b2e-a424-4b76-9325-ee7e9a2126c8")
+		)
+		(pin "1"
+			(uuid "04c90de8-da9d-4cbd-b68a-3ba5cbc0826d")
+		)
+		(instances
+			(project "CE346 PCB"
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "MK3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Crystal_GND23")
 		(at 125.73 40.64 0)
 		(unit 1)
@@ -3415,6 +3951,156 @@
 			(project ""
 				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
 					(reference "Y1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 184.15 44.45 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8addef2a-bf72-4c78-a8b0-866746a25353")
+		(property "Reference" "D2"
+			(at 186.69 43.1799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "D_Zener"
+			(at 186.69 45.7199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 184.15 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Zener diode"
+			(at 184.15 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59e93c72-a87d-4825-b1cb-751d8a535cf6")
+		)
+		(pin "2"
+			(uuid "a86ed290-394c-496b-9a8a-95f8126d0087")
+		)
+		(instances
+			(project "CE346 PCB"
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Audio:IM69D130")
+		(at 34.925 163.195 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8cc6c372-e254-4356-a110-37889886eb89")
+		(property "Reference" "MK1"
+			(at 25.4 161.9249 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "IM69D130"
+			(at 25.4 164.4649 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "CE346 Footprints:Logic_level_shifter"
+			(at 52.705 170.815 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IM69D130-DS-v01_00-EN.pdf?fileId=5546d462602a9dc801607a0e46511a2e"
+			(at 34.925 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "High performance digital XENSIV MEMS microphone, -36 dBFS Sensitivity, LLGA-5"
+			(at 34.925 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "47e5ecf7-d57b-493e-a287-5a01d27f0aae")
+		)
+		(pin "5"
+			(uuid "0c7ddac2-2939-4c41-ae72-55ca8066c4ad")
+		)
+		(pin "4"
+			(uuid "0a80b4eb-f782-42a8-8220-45bb4d945493")
+		)
+		(pin "3"
+			(uuid "41c1816f-f340-4a20-84df-c2c064dabd02")
+		)
+		(pin "1"
+			(uuid "686287b1-132b-4bf9-98b2-a0c1db2be429")
+		)
+		(instances
+			(project ""
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "MK1")
 					(unit 1)
 				)
 			)
@@ -3501,80 +4187,6 @@
 			(project "CE346 PCB"
 				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
 					(reference "J4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
-		(at 34.925 68.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a0c07f10-f36d-4254-aa16-09806e9a9436")
-		(property "Reference" "J2"
-			(at 35.56 61.595 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x04_Pin"
-			(at 35.56 64.135 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 34.925 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 34.925 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 34.925 68.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "54ae1e26-30e1-4061-a32d-dda257d977ea")
-		)
-		(pin "1"
-			(uuid "4ed72b2a-069c-4acf-9aed-25258d4ccb3c")
-		)
-		(pin "3"
-			(uuid "037bd94b-f1df-4a6b-9b2d-fc535514bd2a")
-		)
-		(pin "4"
-			(uuid "3e686982-7360-46a2-8a2a-ecd4b2ed784a")
-		)
-		(instances
-			(project "CE346 PCB"
-				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
-					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -3801,6 +4413,92 @@
 			(project "CE346 PCB"
 				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x04_Odd_Even")
+		(at 40.005 65.405 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7d7d55a-2597-4507-9270-415fe7daf780")
+		(property "Reference" "J2"
+			(at 41.275 56.515 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x04_Odd_Even"
+			(at 41.275 59.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.005 65.405 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 40.005 65.405 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 40.005 65.405 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "4736e1f4-30ee-4f37-af19-d9be21e6f2a4")
+		)
+		(pin "5"
+			(uuid "f845f7dc-58f2-451e-91fd-62f73d2c2ac9")
+		)
+		(pin "8"
+			(uuid "8ab43ddc-ad43-4a83-97e0-b2f0097a2030")
+		)
+		(pin "1"
+			(uuid "68a751da-5d38-4fe6-953e-86d3fd5c5633")
+		)
+		(pin "3"
+			(uuid "730b7873-0ec6-460b-8b91-8272acbc6405")
+		)
+		(pin "2"
+			(uuid "04dde325-a12f-4e37-9c87-579d1be0a31b")
+		)
+		(pin "7"
+			(uuid "1369300a-64df-46ac-ae4d-bb2cc6dce75e")
+		)
+		(pin "6"
+			(uuid "c3de4030-6273-49c5-9cec-be5990ec5df9")
+		)
+		(instances
+			(project "CE346 PCB"
+				(path "/c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+					(reference "J2")
 					(unit 1)
 				)
 			)
