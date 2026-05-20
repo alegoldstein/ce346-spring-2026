@@ -244,68 +244,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      [
-        "pin_not_driven|1739900|1041400|c96344fb-eb53-4f19-ab52-c2cfaaea8733|00000000-0000-0000-0000-000000000000|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|",
-        "UART2_RX is an output pin that will drive this input"
-      ],
-      [
-        "pin_to_pin|1739900|1270000|5245240e-bd97-40f0-aba7-edf772d4c2ed|00535ed4-9ed0-4fb7-8b24-d1cd2fbec054|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. Grounds should be connected"
-      ],
-      [
-        "pin_to_pin|1739900|914400|28a8aaac-dc26-4142-9580-0575b043f513|5245240e-bd97-40f0-aba7-edf772d4c2ed|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns should be connected"
-      ],
-      [
-        "pin_to_pin|2247900|1016000|4cc0b9a2-c2c8-4492-b845-8e8654266940|332c3176-da32-4be6-9eea-a3c82b1ade0b|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|1041400|bc7ec0ee-a664-4c46-83f5-50a1f0f5ebab|4cc0b9a2-c2c8-4492-b845-8e8654266940|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|1066800|b14f3577-4508-4abd-87f8-cb013019230f|bc7ec0ee-a664-4c46-83f5-50a1f0f5ebab|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|1092200|281f9d94-fb88-4c25-bc0a-0ca0583cbef3|b14f3577-4508-4abd-87f8-cb013019230f|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|1117600|e44e3850-b40e-40a0-9b06-b6c70122f138|281f9d94-fb88-4c25-bc0a-0ca0583cbef3|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|1143000|00535ed4-9ed0-4fb7-8b24-d1cd2fbec054|e44e3850-b40e-40a0-9b06-b6c70122f138|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|939800|9ab3d197-9c6b-4680-9a91-6af4c1414abf|c57052c9-ec24-41d5-9552-c7aa9cbe06cb|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|965200|afb0d2d3-ac1f-47c7-8341-77e6f3202977|9ab3d197-9c6b-4680-9a91-6af4c1414abf|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2247900|990600|332c3176-da32-4be6-9eea-a3c82b1ade0b|afb0d2d3-ac1f-47c7-8341-77e6f3202977|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "pin_to_pin|2679700|2120900|a0889f2e-c890-4a37-8eb5-d29bbff9d00d|5f58d5db-2297-4783-b751-e823903aaa44|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "Not a problem. This is what we should expect"
-      ],
-      [
-        "pin_to_pin|3225800|736600|212d8f20-56dd-424b-b15e-db4f779b4952|c57052c9-ec24-41d5-9552-c7aa9cbe06cb|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-        "This is okay. The groudns sohuld be connected to each other"
-      ],
-      [
-        "power_pin_not_driven|1739900|939800|4324dd11-bbe8-4867-ab04-a1490f1d3858|00000000-0000-0000-0000-000000000000|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|/c8d67b58-b641-4d7a-98a0-a3ea5d082b88|",
-        "This is okay. The 3v3 is driven by a power pin"
-      ]
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -490,14 +429,11 @@
       "duplicate_sheet_names": "error",
       "endpoint_off_grid": "warning",
       "extra_units": "error",
-      "field_name_whitespace": "warning",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
       "four_way_junction": "ignore",
       "global_label_dangling": "warning",
-      "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
-      "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
       "lib_symbol_issues": "warning",
@@ -520,10 +456,8 @@
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
       "single_global_label": "ignore",
-      "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
-      "undefined_netclass": "error",
       "unit_value_mismatch": "error",
       "unresolved_variable": "error",
       "wire_dangling": "error"
@@ -582,10 +516,6 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "annotation": {
-      "method": 0,
-      "sort_order": 0
-    },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
@@ -665,7 +595,6 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
-      "hop_over_size_choice": 0,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -689,7 +618,6 @@
     "net_format_name": "",
     "page_layout_descr_file": "",
     "plot_directory": "",
-    "reuse_designators": true,
     "space_save_all_events": true,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
@@ -703,16 +631,14 @@
       {
         "filename": "CE346 PCB.kicad_sch",
         "name": "CE346 PCB",
-        "uuid": "c8d67b58-b641-4d7a-98a0-a3ea5d082b88"
+        "uuid": "00000000-0000-0000-0000-000000000000"
       }
-    ],
-    "used_designators": "",
-    "variants": []
+    ]
   },
   "sheets": [
     [
       "c8d67b58-b641-4d7a-98a0-a3ea5d082b88",
-      "CE346 PCB"
+      "Root"
     ]
   ],
   "text_variables": {},
