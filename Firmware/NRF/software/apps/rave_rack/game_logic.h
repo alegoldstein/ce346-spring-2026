@@ -1,0 +1,53 @@
+
+#include <stdint.h>
+#include <stdio.h>
+
+#include "app_timer.h"
+#include "nrf_delay.h"
+#include "nrf_gpio.h"
+#include "nrfx_saadc.h"
+
+//////////////////////////////////////////////
+/// Pin definitions
+//////////////////////////////////////////////
+
+// IR sensor pins
+#define IR_MUX_CTRL_0	NRF_GPIO_MAP(0, 15)
+#define IR_MUX_CTRL_1	NRF_GPIO_MAP(0, 17)
+#define IR_MUX_CTRL_2 	NRF_GPIO_MAP(0, 20)
+#define IR_MUX_CTRL_3	NRF_GPIO_MAP(0, 3)
+#define IR_MUX_DATA	NRF_SAADC_INPUT_AIN7
+
+// Piezoelectric sensor pins
+#define PIEZO_1		NRF_SAADC_INPUT_AIN6
+#define PIEZO_2		NRF_SAADC_INPUT_AIN5
+#define PIEZO_3		NRF_SAADC_INPUT_AIN4
+#define PIEZO_4		NRF_SAADC_INPUT_AIN0
+
+// SPI pins
+#define SPI_CLK		NRF_GPIO_MAP(0, 4)
+#define SPI_CS		NRF_GPIO_MAP(0, 5)
+#define SPI_MISO	NRF_GPIO_MAP(1, 9)
+#define SPI_MOSI	NRF_GPIO_MAP(0, 11)
+
+// UART pins
+#define SCOREBOARD_RX	NRF_GPIO_MAP(0, 9)
+#define SCOREBOARD_TX	NRF_GPIO_MAP(0, 10)
+
+// Reset pin
+#define NRF_RESET	NRF_GPIO_MAP(0, 18)	
+
+//////////////////////////////////////////////
+/// Game logic
+//////////////////////////////////////////////
+
+typedef struct {
+	uint8_t TEAM_1_SCORE;
+	uint8_t TEAM_2_SCORE;
+	uint8_t GAME_MODE;
+	uint8_t TEAM_1_NUM_CUPS;
+	uint8_t TEAM_2_NUM_CUPS;
+	// uint8_t MASTER_PCB;
+} game_state_t;
+
+void init_game(void);
