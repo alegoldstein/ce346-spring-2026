@@ -42,12 +42,19 @@
 //////////////////////////////////////////////
 
 typedef struct {
-	uint8_t TEAM_1_SCORE;
+	uint8_t TEAM_1_SCORE; //each table assumes its cups are team_1_score
 	uint8_t TEAM_2_SCORE;
-	uint8_t GAME_MODE;
+	bool PONG;
+	bool DICE;
 	uint8_t TEAM_1_NUM_CUPS;
 	uint8_t TEAM_2_NUM_CUPS;
 	// uint8_t MASTER_PCB;
 } game_state_t;
 
-void init_game(void);
+//function declarations
+
+void init_game(game_state_t game);
+
+
+
+
