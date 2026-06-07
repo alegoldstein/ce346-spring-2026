@@ -6,43 +6,52 @@
 #include "nrf_delay.h"
 #include "nrf_gpio.h"
 #include "nrfx_saadc.h"
+#include "nrfx_spim.h"
 
 //////////////////////////////////////////////
 /// Pin definitions
 //////////////////////////////////////////////
 
 // IR sensor pins
-#define IR_MUX_CTRL_0	NRF_GPIO_PIN_MAP(0, 15)
-#define IR_MUX_CTRL_1	NRF_GPIO_PIN_MAP(0, 17)
-#define IR_MUX_CTRL_2 	NRF_GPIO_PIN_MAP(0, 20)
-#define IR_MUX_CTRL_3	NRF_GPIO_PIN_MAP(0, 3)
-#define IR_MUX_DATA	NRF_SAADC_INPUT_AIN7
+#define IR_MUX_CTRL_0		NRF_GPIO_PIN_MAP(0, 15)
+#define IR_MUX_CTRL_1		NRF_GPIO_PIN_MAP(0, 17)
+#define IR_MUX_CTRL_2 		NRF_GPIO_PIN_MAP(0, 20)
+#define IR_MUX_CTRL_3		NRF_GPIO_PIN_MAP(0, 3)
+#define IR_MUX_DATA		NRF_SAADC_INPUT_AIN7
+#define IR_THRESH		500				// Placeholder
 
 // Piezoelectric sensor pins
-#define PIEZO_1		NRF_SAADC_INPUT_AIN6
-#define PIEZO_2		NRF_SAADC_INPUT_AIN5
-#define PIEZO_3		NRF_SAADC_INPUT_AIN4
-#define PIEZO_4		NRF_SAADC_INPUT_AIN0
+#define PIEZO_1			NRF_SAADC_INPUT_AIN6
+#define PIEZO_2			NRF_SAADC_INPUT_AIN5
+#define PIEZO_3			NRF_SAADC_INPUT_AIN4
+#define PIEZO_4			NRF_SAADC_INPUT_AIN0
+
+// ADC channels
+#define ADC_IR_CHANNEL		0
+#define ADC_PIEZO_1_CHANNEL	1
+#define ADC_PIEZO_2_CHANNEL	2
+#define ADC_PIEZO_3_CHANNEL	3
+#define ADC_PIEZO_4_CHANNEL	4
 
 // SPI pins
-#define SPI_CLK		NRF_GPIO_PIN_MAP(0, 4)
-#define SPI_CS		NRF_GPIO_PIN_MAP(0, 5)
-#define SPI_MISO	NRF_GPIO_PIN_MAP(1, 9)
-#define SPI_MOSI	NRF_GPIO_PIN_MAP(0, 11)
+#define SPI_CLK			NRF_GPIO_PIN_MAP(0, 4)
+#define SPI_CS			NRF_GPIO_PIN_MAP(0, 5)
+#define SPI_MISO		NRF_GPIO_PIN_MAP(1, 9)
+#define SPI_MOSI		NRF_GPIO_PIN_MAP(0, 11)
 
 // UART pins
-#define SCOREBOARD_RX	NRF_GPIO_PIN_MAP(0, 9)
-#define SCOREBOARD_TX	NRF_GPIO_PIN_MAP(0, 10)
+#define SCOREBOARD_RX		NRF_GPIO_PIN_MAP(0, 9)
+#define SCOREBOARD_TX		NRF_GPIO_PIN_MAP(0, 10)
 
 // Reset pin
-#define NRF_RESET	NRF_GPIO_PIN_MAP(0, 18)	
+#define NRF_RESET		NRF_GPIO_PIN_MAP(0, 18)	
 
 //////////////////////////////////////////////
 /// Game logic
 //////////////////////////////////////////////
 
 typedef struct {
-	uint8_t TEAM_1_SCORE; //each table assumes its cups are team_1_score
+	uint8_t TEAM_1_SCORE; 		// Each table assumes its cups are TEAM_1_SCORE
 	uint8_t TEAM_2_SCORE;
 	bool PONG;
 	bool DICE;
@@ -51,10 +60,5 @@ typedef struct {
 	// uint8_t MASTER_PCB;
 } game_state_t;
 
-//function declarations
-
-void init_game(game_state_t game);
-
-
-
-
+// Function declarations
+void init_game(game_state_t *game, nrfx_spim_t *spim_inst);

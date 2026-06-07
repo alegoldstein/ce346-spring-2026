@@ -16,16 +16,18 @@
 #define ADC_TEMP_CHANNEL  0
 #define ADC_LIGHT_CHANNEL 1
 
-game_state_t game = {};
+game_state_t game;
+nrfx_spim_t spim_inst;
+uint8_t esp_data_buf = {0};
 bool send_audio = false;
 
-int main(void){
+int main(void) {
     //set game defaults
-    init_game(game_state_t game);
+    init_game(&game, &spim_inst);
 
     //main loop
-    while(1){
-        if (game.PONG){
+    while(1) {
+        if (game.PONG) {
             uint8_t count = 0;
             for (uint8_t i = 0; i < 8; i++){
                 //control mux to gather IR sensor data
@@ -34,9 +36,9 @@ int main(void){
                 IR_MUX_CONTROL2 = i & 4;
                 IR_MUX_CONTROL3 = i & 8;
                 
-                if (i < 6){ //only for cups on diamond
+                if (i < 6) { //only for cups on diamond
                     //threshold to determine if cup is off table
-                    if (IR_MUX_DATA < ?){
+                    if (IR_MUX_DATA < IR_THRESH) {
                         count++;
                         game.TEAM_1_CUPS &= !(1 << i); //update cup states
                     }
