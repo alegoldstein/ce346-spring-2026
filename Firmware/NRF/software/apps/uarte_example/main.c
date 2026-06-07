@@ -11,12 +11,15 @@
 
 #include "microbit_v2.h"
 
+#define UART_TX		NRF_GPIO_PIN_MAP(0, 10)
+#define UART_RX		NRF_GPIO_PIN_MAP(0, 9)
+
 static const nrfx_uarte_t UARTE_INST = NRFX_UARTE_INSTANCE(1);
 
 static void uarte_init(void) {
   nrfx_uarte_config_t uarte_config = {
-    .pseltxd = EDGE_P7,
-    .pselrxd = EDGE_P8,
+    .pseltxd = UART_TX,
+    .pselrxd = UART_RX,
     .pselcts = NRF_UARTE_PSEL_DISCONNECTED,
     .pselrts = NRF_UARTE_PSEL_DISCONNECTED,
     .p_context = NULL,

@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 //definitions for functions to control table leds
 #define DIN1    16
 #define DIN2    4   
@@ -12,7 +14,7 @@
 void led_init(void);
 
 //light up quadrant based on piezo sensing
-void led_quadrant(uintn8_t corner);
+void led_quadrant(uint8_t corner);
 
 //light up rings around cups based on uint8_t cups data in game stuct and game mode
 void led_cups(void);
