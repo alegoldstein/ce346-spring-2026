@@ -11,8 +11,8 @@
 #define UART2_TX    21
 #define UART2_RX    34
 #define GAME_BTN    35
-#define SOUND_BTN
-#define KILL_BTN
+#define SOUND_BTN   39 //VN
+#define KILL_BTN    36 //VP
 
 
 void init_uart(void);

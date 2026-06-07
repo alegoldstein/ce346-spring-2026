@@ -41,15 +41,5 @@ spim_config.mode = NRF_SPIM_MODE_0;
 nrfx_spim_init(&SPIM_INST, &spim_config, NULL, NULL);
 
 
-//initialize button interrupts
-//********************** */
-  // calls the `gpio_handler` callback function when either button is pressed
-  nrfx_gpiote_init();
-  nrfx_gpiote_in_config_t in_config = NRFX_GPIOTE_CONFIG_IN_SENSE_LOTOHI(true); // high-accuracy mode
-  nrfx_gpiote_in_init(BTN_A, &in_config, gpio_handler);
-  nrfx_gpiote_in_event_enable(BTN_A, true); // enable interrupts for BTN_A
-  nrfx_gpiote_in_init(BTN_B, &in_config, gpio_handler);
-  nrfx_gpiote_in_event_enable(BTN_B, true); // enable interrupts for BTN_B
-
 
 }
