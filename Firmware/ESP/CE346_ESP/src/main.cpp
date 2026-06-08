@@ -14,7 +14,7 @@ uint8_t tx_buf[BUFFER_SIZE] {1, 2, 3, 4, 5, 6, 7, 8};
 uint8_t rx_buf[BUFFER_SIZE] {0, 0, 0, 0, 0, 0, 0, 0};
 
 bool sound_reactive = false;
-bool kill = false;
+//bool kill = false;
 bool dice_cup_lift = false; //if dice lands in cup, celebrate
 
 struct game_state_t {
@@ -24,7 +24,7 @@ struct game_state_t {
 	bool DICE;
 	uint16_t TEAM_1_NUM_CUPS;
 	uint16_t TEAM_2_NUM_CUPS;
-}
+};
 
 game_state_t game;
 
@@ -44,9 +44,9 @@ void setup() {
     pinMode(GAME_BTN, INPUT);
     pinMode(KILL_BTN, INPUT);
     pinMode(SOUND_BTN, INPUT);
-    attachInterupt(GAME_BTN, game_switch_handler(), FALLING);  //all falling edge, hardware pullups
-    attachInterupt(KILL_BTN, kill_switch_handler(), FALLING);
-    attachInterupt(SOUND_BTN, sound_btn_handler(), FALLING);
+    // attachInterupt(GAME_BTN, game_switch_handler(), FALLING);  //all falling edge, hardware pullups
+    // attachInterupt(KILL_BTN, kill_switch_handler(), FALLING);
+    // attachInterupt(SOUND_BTN, sound_btn_handler(), FALLING);
 
     led_init();
 }
@@ -98,7 +98,7 @@ void loop() {
 
 //callback handler for kill switch button
 void kill_switch_handler(){
-    kill = true;
+  //  kill = true;
     //turn off LEDs
     led_kill();
 
