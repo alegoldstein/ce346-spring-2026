@@ -18,12 +18,12 @@ bool kill = false;
 bool dice_cup_lift = false; //if dice lands in cup, celebrate
 
 struct game_state_t {
-    uint8_t TEAM_1_SCORE; 
-	uint8_t TEAM_2_SCORE;
+    uint16_t TEAM_1_SCORE; 
+	uint16_t TEAM_2_SCORE;
 	bool PONG;
 	bool DICE;
-	uint8_t TEAM_1_NUM_CUPS;
-	uint8_t TEAM_2_NUM_CUPS;
+	uint16_t TEAM_1_NUM_CUPS;
+	uint16_t TEAM_2_NUM_CUPS;
 }
 
 game_state_t game;
@@ -40,7 +40,14 @@ void setup() {
     slave.begin(HSPI, SPI_SCK, SPI_MISO, SPI_MOSI, SPI_CS);  // default: HSPI (please refer README for pin assignments)
     Serial.println("slave initialized");
 
-    init_button_interrupts();
+    //init button interrupts
+    pinMode(GAME_BTN, INPUT);
+    pinMode(KILL_BTN, INPUT);
+    pinMode(SOUND_BTN, INPUT);
+    attachInterupt(GAME_BTN, game_switch_handler(), FALLING);  //all falling edge, hardware pullups
+    attachInterupt(KILL_BTN, kill_switch_handler(), FALLING);
+    attachInterupt(SOUND_BTN, sound_btn_handler(), FALLING);
+
     led_init();
 }
 
@@ -61,23 +68,29 @@ void loop() {
     //     Serial.println("unexpected difference found between master/slave data");
     // }
 
-    if (!kill){
-        if (game.PONG){
-            //light up rings around cups
-            led_cups(game.TEAM_1_CUPS);
+    //off for testing
+    // if (!kill){
+    //     if (game.PONG){
+    //         //light up rings around cups
+    //         led_cups(game.TEAM_1_CUPS);
+    //         if (game.TEAM_1_SCORE = 10){ //ESP on each half, if their halves score is 6 then they celebrate
+    //             led_celebrate();
+    //         }
 
-        }
-        else if (game.DICE){
-            led_cups(129); //10000001
-            if (dice_cup_lift) {
-                led_celebrate();
-                dice_cup_lift = false;
-            }
-        }
-        else {
-            Serial.println("no game mode on\n");
-        }
-    }
+    //     }
+    //     else if (game.DICE){
+    //         led_cups(129); //10000001
+    //         if (dice_cup_lift) {
+    //             led_cup_lift();
+    //             dice_cup_lift = false;
+    //         }
+    //     }
+    //     else {
+    //         Serial.println("no game mode on\n");
+    //         delay_ms(1500);
+    //     }
+    // }
+    led_test();
 }
 
 
@@ -87,14 +100,15 @@ void loop() {
 void kill_switch_handler(){
     kill = true;
     //turn off LEDs
+    led_kill();
 
     //reset game state
     game.TEAM_1_SCORE = 0;
 	game.TEAM_2_SCORE = 0;
 	game.PONG = true;
 	game.DICE = false;
-	game.TEAM_1_NUM_CUPS = 255;
-	game.TEAM_2_NUM_CUPS = 255;
+	game.TEAM_1_NUM_CUPS = 0xFFFF;
+	game.TEAM_2_NUM_CUPS = 0xFFFF;
 
     sound_reactive = false;
 

@@ -38,6 +38,11 @@
 
 #define SAADC_INTENSET    (*(volatile uint32_t *)(SAADC_BASE_ADDR + INTENSET_OFFSET))
 
+#define BOTT_LEFT   0b11000000
+#define BOTT_RIGHT  0b00110000
+#define TOP_LEFT    0b00001100
+#define TOP_RIGHT   0b00000011
+
 acd_init();
 
 void init_game(game_state_t *game, nrfx_spim_t *spim_inst){
@@ -127,24 +132,24 @@ void saadc_event_callback(nrfx_saadc_evt_t const * p_event)
     //ch0 piezo correlates to leftmost bits (bottom left rn)
     if (CH0_LMTH == 1){
     CH0_LMTH = 0;
-    corners |= 3 << 6;
+    corners |= BOTT_LEFT;
     }
 
     //ch4 piezo correlates to middle left bits (bottom right rn)
     if (CH4_LMTH == 1){
     CH4_LMTH = 0;
-    corners |= 3 << 4;
+    corners |= BOTT_RIGHT;
     }
 
     //ch5 piezo correlates to middle right bits (top left)
     if (CH5_LMTH == 1){
     CH5_LMTH = 0;
-    corners |= 3 << 2;
+    corners |= TOP_LEFT;
     }
 
     //ch6 piezo correlates to right bits (top right)
     if (CH6_LMTH == 1){
     CH6_LMTH = 0;
-    corners |= 3;
+    corners |= TOP_RIGHT;
     }
 }

@@ -1,33 +1,26 @@
 #include "led.h"
 #include <FastLED.h>
 
-#define CHIPSET WS2812B
-#define NUM_LEDS1
-#define NUM_LEDS2
-#define NUM_LEDS3
-#define NUM_LEDS4
-#define NUM_LEDS5
-
-CRGB leds1[NUM_LEDS1];
-CRGB leds2[NUM_LEDS2];
-CRGB leds3[NUM_LEDS3];
-CRGB leds4[NUM_LEDS4];
-CRGB leds5[NUM_LEDS5];
+CRGB left_ch[NUM_LEDS1]; //left channels
+CRGB right_ch[NUM_LEDS2]; //right channels
+CRGB cups[NUM_LEDS3]; //cups
+CRGB logo[NUM_LEDS4]; //logo
+CRGB border[NUM_LEDS5]; //border
+CRGB test[14];
 
 //number of leds per cup
-uint8_t CUP_LEDS = 12;
-
+uint8_t CUP_LEDS = ;
 
 
 //functions to control table leds
 
 //init leds, flash around the table upon powering on
 void led_init(void){
-    FastLED.addLeds<CHIPSET, DIN1, COLOR_ORDER>(leds1, NUM_LEDS1).setCorrection(TypicalLEDStrip);
-    FastLED.addLeds<CHIPSET, DIN2, COLOR_ORDER>(leds2, NUM_LEDS2).setCorrection(TypicalLEDStrip);
-    FastLED.addLeds<CHIPSET, DIN3, COLOR_ORDER>(leds3, NUM_LEDS3).setCorrection(TypicalLEDStrip);
-    FastLED.addLeds<CHIPSET, DIN4, COLOR_ORDER>(leds4, NUM_LEDS4).setCorrection(TypicalLEDStrip);
-    FastLED.addLeds<CHIPSET, DIN5, COLOR_ORDER>(leds5, NUM_LEDS5).setCorrection(TypicalLEDStrip);
+    FastLED.addLeds<CHIPSET, DIN1, COLOR_ORDER>(left_ch, NUM_LEDS1).setCorrection(TypicalLEDStrip);
+    FastLED.addLeds<CHIPSET, DIN2, COLOR_ORDER>(right_ch, NUM_LEDS2).setCorrection(TypicalLEDStrip);
+    FastLED.addLeds<CHIPSET, DIN3, COLOR_ORDER>(cups, NUM_LEDS3).setCorrection(TypicalLEDStrip);
+    FastLED.addLeds<CHIPSET, DIN4, COLOR_ORDER>(logo, NUM_LEDS4).setCorrection(TypicalLEDStrip);
+    FastLED.addLeds<CHIPSET, DIN5, COLOR_ORDER>(border, NUM_LEDS5).setCorrection(TypicalLEDStrip);
 
     FastLED.setBrightness(70);
 
@@ -38,12 +31,32 @@ void led_init(void){
 
 //light up quadrant based on piezo sensing
 void led_quadrant(uintn8_t corner){
+  
+    if (corner & BOTT_LEFT == BOTT_LEFT) {
+
+    }
+
+    if (corner & BOTT_RIGHT== BOTT_RIGHT) {
+
+    }
+
+    if (corner & TOP_LEFT == TOP_LEFT) {
+
+    }
+
+    if (corner & TOP_RIGHT == TOP_RIGHT) {
+
+    }
     
 }
 
 //light up rings around cups based on uint8_t cups data in game stuct and game mode
-void led_cups(uint8_t cups){
-
+void led_cups(uint16_t cups){
+    for (uint8_t i = 0; i < 10; i++){
+        if (cups & (1 << i)){
+            //light up leds for i cup
+        }
+    }
 
 }
 
@@ -52,8 +65,45 @@ void led_sound(void){
 
 }
 
+//mini celebration when an opponent cup is lifted (you scored)
+void led_cup_lift(void){
+
+}
+
 //celebratory light display for team when their oppponent loses
 //at some point the ESPs need to determine which side theyre responsible for
-void led_celebration(void){
+void led_celebrate(void){
 
+}
+
+//turn off all leds
+void led_kill(void){
+    for (uint32_t i = 0; i < NUM_LEDS1; i++){
+        left_ch[i] = CRGB::Black;
+    }
+    for (uint32_t i = 0; i < NUM_LEDS2; i++){
+        right_ch[i] = CRGB::Black;
+    }
+    for (uint32_t i = 0; i < NUM_LEDS3; i++){
+        cups[i] = CRGB::Black;
+    }
+    for (uint32_t i = 0; i < NUM_LEDS4 i++){
+        logo[i] = CRGB::Black;
+    }
+    for (uint32_t i = 0; i < NUM_LEDS5; i++){
+        border[i] = CRGB::Black;
+    }
+    FastLED.show();
+}
+
+void led_test(void){
+    FastLED.addLeds<CHIPSET, DIN5, COLOR_ORDER>(test, 14).setCorrection(TypicalLEDStrip);
+    FastLED.setBrightness(40);
+
+    for (uint8_t i = 0; i < 14; i++){
+        test[i] = CRGB::Red;
+        FastLED.show();
+        test[i] = CRGB::Black;
+        delay(250);
+    }
 }

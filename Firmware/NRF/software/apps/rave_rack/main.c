@@ -25,12 +25,12 @@ int main(void) {
             uint8_t count = 0;
             for (uint8_t i = 0; i < 8; i++){
                 //control mux to gather IR sensor data
-                IR_MUX_CONTROL0 = i & 1;
-                IR_MUX_CONTROL1 = i & 2;
-                IR_MUX_CONTROL2 = i & 4;
-                IR_MUX_CONTROL3 = i & 8;
+                IR_MUX_CONTROL0 = i & 0b0001;
+                IR_MUX_CONTROL1 = i & 0b0010;
+                IR_MUX_CONTROL2 = i & 0b0100;
+                IR_MUX_CONTROL3 = i & 0b1000;
                 
-                if (i < 6) { //only for cups on diamond
+                if (i < 10) { //only for cups on diamond
                     //threshold to determine if cup is off table
                     if (IR_MUX_DATA < IR_THRESH) {
                         count++;
