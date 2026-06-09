@@ -27,7 +27,7 @@ void led_init(void);
 void led_quadrant(uint8_t corner);
 
 //light up rings around cups based on uint8_t cups data in game stuct and game mode
-void led_cups(uint8_t cups);
+void led_cups(uint16_t cup_array);
 
 //light up leds reacting to sound
 void led_sound(void);

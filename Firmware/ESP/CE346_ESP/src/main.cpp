@@ -13,9 +13,13 @@ static constexpr size_t QUEUE_SIZE = 1;
 uint8_t tx_buf[BUFFER_SIZE] {1, 2, 3, 4, 5, 6, 7, 8};
 uint8_t rx_buf[BUFFER_SIZE] {0, 0, 0, 0, 0, 0, 0, 0};
 
-bool sound_reactive = false;
-//bool kill = false;
-bool dice_cup_lift = false; //if dice lands in cup, celebrate
+volatile bool sound_reactive = false;
+volatile bool game_kill = false;
+volatile bool dice_cup_lift = false; //if dice lands in cup, celebrate
+
+void IRAM_ATTR game_switch_handler();
+void IRAM_ATTR kill_switch_handler();
+void IRAM_ATTR sound_btn_handler();
 
 struct game_state_t {
     uint16_t TEAM_1_SCORE; 
@@ -44,9 +48,9 @@ void setup() {
     pinMode(GAME_BTN, INPUT);
     pinMode(KILL_BTN, INPUT);
     pinMode(SOUND_BTN, INPUT);
-    // attachInterupt(GAME_BTN, game_switch_handler(), FALLING);  //all falling edge, hardware pullups
-    // attachInterupt(KILL_BTN, kill_switch_handler(), FALLING);
-    // attachInterupt(SOUND_BTN, sound_btn_handler(), FALLING);
+    attachInterrupt(GAME_BTN, game_switch_handler, FALLING);  //all falling edge, hardware pullups
+    attachInterrupt(KILL_BTN, kill_switch_handler, FALLING);
+    attachInterrupt(SOUND_BTN, sound_btn_handler, FALLING);
 
     led_init();
 }
@@ -69,27 +73,27 @@ void loop() {
     // }
 
     //off for testing
-    // if (!kill){
-    //     if (game.PONG){
-    //         //light up rings around cups
-    //         led_cups(game.TEAM_1_CUPS);
-    //         if (game.TEAM_1_SCORE = 10){ //ESP on each half, if their halves score is 6 then they celebrate
-    //             led_celebrate();
-    //         }
+    if (!game_kill){
+        if (game.PONG){
+            //light up rings around cups
+            led_cups(game.TEAM_1_NUM_CUPS);
+            if (game.TEAM_1_SCORE == 10){ //ESP on each half, if their halves score is 6 then they celebrate
+                led_celebrate();
+            }
 
-    //     }
-    //     else if (game.DICE){
-    //         led_cups(129); //10000001
-    //         if (dice_cup_lift) {
-    //             led_cup_lift();
-    //             dice_cup_lift = false;
-    //         }
-    //     }
-    //     else {
-    //         Serial.println("no game mode on\n");
-    //         delay_ms(1500);
-    //     }
-    // }
+        }
+        else if (game.DICE){
+            led_cups(0b10000001); //10000001
+            if (dice_cup_lift) {
+                led_cup_lift();
+                dice_cup_lift = false;
+            }
+        }
+        else {
+            Serial.println("no game mode on\n");
+            delay(1500);
+        }
+    }
     led_test();
 }
 
@@ -97,8 +101,8 @@ void loop() {
 //button callbacks
 
 //callback handler for kill switch button
-void kill_switch_handler(){
-  //  kill = true;
+void IRAM_ATTR kill_switch_handler(){
+    game_kill = true;
     //turn off LEDs
     led_kill();
 
@@ -117,7 +121,7 @@ void kill_switch_handler(){
 }
 
 //handler for when game switch button is pressed
-void game_swtich_handler(){
+void IRAM_ATTR game_switch_handler(){
     game.PONG = !game.PONG;
     game.DICE = !game.DICE;
 
@@ -125,7 +129,7 @@ void game_swtich_handler(){
 }
 
 //handler for when sound btn button is pressed
-void sound_btn_handler(){
+void IRAM_ATTR sound_btn_handler(){
     sound_reactive = !sound_reactive;
     
     //communicate to NRF so that it knows to send audio data
