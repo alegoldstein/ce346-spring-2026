@@ -6,7 +6,9 @@ CRGB right_ch[NUM_LEDS2]; //right channels
 CRGB cups[NUM_LEDS3]; //cups
 CRGB logo[NUM_LEDS4]; //logo
 CRGB border[NUM_LEDS5]; //border
-CRGB test[14];
+CRGB test[140];
+CRGB test2[140];
+
 
 
 
@@ -144,16 +146,28 @@ void led_kill(void){
 }
 
 void led_test(void){
-    FastLED.addLeds<CHIPSET, DIN5>(test, 14).setCorrection(TypicalLEDStrip);
-    FastLED.setBrightness(40);
-Serial.println("test starting\n");
-    for (uint8_t i = 0; i < 14; i++){
-        test[i] = CRGB::Blue;
+
+    FastLED.addLeds<CHIPSET, DIN5>(test, 213).setCorrection(TypicalLEDStrip);
+    FastLED.addLeds<CHIPSET, DIN4>(test2, 213).setCorrection(TypicalLEDStrip);
+
+    FastLED.setBrightness(200);
+
+    uint16_t hue_offset = 0;
+
+    while(true){
+
+        for(uint16_t i = 0; i < 213; i++){
+
+            uint8_t hue = (i * 256 / 213 + hue_offset) & 0xFF;
+
+            test[i]  = CHSV(hue, 255, 255);
+            test2[i] = CHSV(hue, 255, 255);
+        }
+
         FastLED.show();
-        test[i] = CRGB::Black;
-        delay(250);
 
+        hue_offset += 2;
+
+        delay(10);
     }
-    Serial.println("test done\n");
-
 }
