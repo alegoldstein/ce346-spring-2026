@@ -144,11 +144,11 @@ void led_kill(void){
 }
 
 void led_test(void){
-    FastLED.addLeds<CHIPSET, DIN1>(test, 14).setCorrection(TypicalLEDStrip);
+    FastLED.addLeds<CHIPSET, DIN5>(test, 14).setCorrection(TypicalLEDStrip);
     FastLED.setBrightness(40);
 Serial.println("test starting\n");
     for (uint8_t i = 0; i < 14; i++){
-        test[i] = CRGB::Red;
+        test[i] = CRGB::Blue;
         FastLED.show();
         test[i] = CRGB::Black;
         delay(250);

@@ -8,10 +8,8 @@
 
 ESP32SPISlave slave;
 
-static constexpr size_t BUFFER_SIZE = 8;
+static constexpr size_t BUFFER_SIZE = 2;
 static constexpr size_t QUEUE_SIZE = 1;
-uint8_t tx_buf[BUFFER_SIZE] {1, 2, 3, 4, 5, 6, 7, 8};
-uint8_t rx_buf[BUFFER_SIZE] {0, 0, 0, 0, 0, 0, 0, 0};
 
 volatile bool sound_reactive = false;
 volatile bool game_kill = false;
@@ -22,23 +20,25 @@ void IRAM_ATTR kill_switch_handler();
 void IRAM_ATTR sound_btn_handler();
 
 struct game_state_t {
-    uint16_t TEAM_1_SCORE; 
-	uint16_t TEAM_2_SCORE;
-	bool PONG;
-	bool DICE;
-	uint16_t TEAM_1_NUM_CUPS;
-	uint16_t TEAM_2_NUM_CUPS;
+    uint16_t TEAM_1_SCORE = 0; 
+	uint16_t TEAM_2_SCORE = 0;
+	bool PONG = true;
+	bool DICE = false;
+	uint16_t TEAM_1_NUM_CUPS = 0x0FFF;
+	uint16_t TEAM_2_NUM_CUPS = 0x0FFF;
 };
 
 game_state_t game;
+uint8_t tx_buf[BUFFER_SIZE] = {game.PONG, game.DICE};
+uint8_t rx_buf[BUFFER_SIZE] = {0, 0};
 
 void setup() {
     Serial.begin(115200);
 
     delay(2000);
 
-    slave.setDataMode(SPI_MODE0);   // default: SPI_MODE0
-    slave.setQueueSize(QUEUE_SIZE); // default: 1, requres 2 in this example
+    slave.setDataMode(SPI_MODE0);
+    slave.setQueueSize(QUEUE_SIZE);
 
     // begin() after setting
     slave.begin(HSPI, SPI_SCK, SPI_MISO, SPI_MOSI, SPI_CS);  // default: HSPI (please refer README for pin assignments)
@@ -111,8 +111,8 @@ void IRAM_ATTR kill_switch_handler(){
 	game.TEAM_2_SCORE = 0;
 	game.PONG = true;
 	game.DICE = false;
-	game.TEAM_1_NUM_CUPS = 0xFFFF;
-	game.TEAM_2_NUM_CUPS = 0xFFFF;
+	game.TEAM_1_NUM_CUPS = 0x0FFF;
+	game.TEAM_2_NUM_CUPS = 0x0FFF;
 
     sound_reactive = false;
 

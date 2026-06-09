@@ -6,7 +6,6 @@
 #include "nrf_delay.h"
 #include "microbit_v2.h"
 
-
 game_state_t game;
 nrfx_spim_t spim_inst;
 uint8_t adc_limit = 0x3F;
@@ -17,7 +16,6 @@ bool send_audio = false;
 int main(void) {
     //set game defaults
     init_game(&game, &spim_inst);
-    adc_init();
 
     //main loop
     while(1) {
