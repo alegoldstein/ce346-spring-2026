@@ -10,21 +10,28 @@ To do so, we CNC'd a wooden table with channels to pour epoxy and placed ~800 WS
 <table align="center">
   <tr>
     <td align="center">
-      <img src="Photos/group.png" width="300"><br>
+      <img src="Photos/group.png" width="500"><br>
       <em>The three of us pouring epoxy</em>
     </td>
     <td align="center">
-      <img src="Photos/pcb.png" width="300"><br>
+      <img src="Photos/pcb.png" width="500"><br>
       <em>Fully assembled PCB</em>
     </td>
   </tr>
 </table>
 
-<p align="center">
-  <img src="Photos/routing.png" width="400">
-  <br>
-  <em>Underside of board while routing power and LEDs</em>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="Photos/routing.png" width="500"><br>
+      <em>Inside of table while routing power and LEDs</em>
+    </td>
+    <td align="center">
+      <img src="Photos/setup.png" width="500"><br>
+      <em>Setting up for demo, LED ring on where cup is placed</em>
+    </td>
+  </tr>
+</table>
 
 I hand wrote the game state code in C for an NRF52833 chip (found in NRF->software->apps->rave_rack) that used a 16 bit variable where bits 0-11 each represented 1 of the 12 cups on a half of a board (10 for pong and 2 for die). The NRF chip was also responsible for cycling through an 16 channel analog multiplexer used to check the values of IR sensors placed beneath each cup to determine whether they had been picked up or not. This information can be used to update the game state and infer the score (more cups missing means other teams score goes up). The NRF chip then communicates the game state to an ESP32 which was responsible for controlling the LEDs.
 
