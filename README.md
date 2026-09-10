@@ -10,11 +10,11 @@ To do so, we CNC'd a wooden table with channels to pour epoxy and placed ~800 WS
 <table align="center">
   <tr>
     <td align="center">
-      <img src="Photos/group.png" width="300"><br>
-      <em>The three of us pouring epoxyr</em>
+      <img src="Photos/group.heic" width="300"><br>
+      <em>The three of us pouring epoxy</em>
     </td>
     <td align="center">
-      <img src="Photos/pcb.png" width="300"><br>
+      <img src="Photos/pcb.heic" width="300"><br>
       <em>Fully assembled PCB</em>
     </td>
   </tr>
