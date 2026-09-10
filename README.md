@@ -38,3 +38,8 @@ I hand wrote the game state code in C for an NRF52833 chip (found in NRF->softwa
 I also wrote C++ code for the ESP32 to animate the LEDs in response to game state changes. For example, during initialization the LEDs would snake around the border to indicate it was turned on and ready. If a cup was lifted (meaning someone scored) a celebration animation would occur. The FastLED library made this simpler since all that was needed was a buffer with each color and brightness we wanted each LED.
 
 The reasoning for having 2 separate MCUs is due to the class being based on the NRF52833 chip, but our group running out of pins since we had a larger scope than expected for a 4 week project. 
+
+
+https://github.com/user-attachments/assets/d65dbca0-1492-469c-94e2-22f77370f840
+
+
