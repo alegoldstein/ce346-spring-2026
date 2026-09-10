@@ -42,4 +42,6 @@ The reasoning for having 2 separate MCUs is due to the class being based on the 
 
 https://github.com/user-attachments/assets/d65dbca0-1492-469c-94e2-22f77370f840
 
+One half of the table featuring LED animations with epoxy cover on top
+
 
